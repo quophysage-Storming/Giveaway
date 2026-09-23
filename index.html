@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Enter our free gift-card giveaway for a chance to win. No purchase necessary.">
+  <meta property="og:title" content="Free Gift Card Giveaway">
+  <meta property="og:description" content="Enter for a chance to win a gift card. No purchase necessary.">
+  <meta property="og:type" content="website">
+  <title>Gift Card Giveaway — Enter Free</title>
+  <style>
+    :root{--bg:#0b1020;--card:#121a30;--text:#f8fafc;--muted:#aab4c8;--accent:#7c5cff;--accent2:#18d7a5;--line:#273352}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(circle at 50% -10%,#26366f 0,#0b1020 48%);color:var(--text);line-height:1.5}
+    .wrap{max-width:1050px;margin:auto;padding:20px}.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0}.brand{font-weight:900;letter-spacing:.3px}.badge{font-size:12px;color:#d9dfff;border:1px solid var(--line);padding:7px 10px;border-radius:999px}
+    .hero{text-align:center;padding:55px 12px 30px}.eyebrow{display:inline-block;background:#172143;color:#bfc9ff;padding:8px 13px;border-radius:999px;font-size:13px;font-weight:800}.hero h1{font-size:clamp(40px,8vw,72px);line-height:1.02;margin:18px 0 14px}.hero h1 span{color:#9a87ff}.hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px}
+    .prize{margin:32px auto;max-width:620px;background:linear-gradient(135deg,#171f3d,#10172b);border:1px solid #34436e;border-radius:28px;padding:28px;box-shadow:0 20px 70px #0005}.gift{font-size:70px}.amount{font-size:52px;font-weight:950}.sub{color:var(--muted)}
+    .timer{display:flex;justify-content:center;gap:10px;margin:20px 0}.time{min-width:75px;background:#0a0f20;border:1px solid var(--line);border-radius:14px;padding:10px}.time b{display:block;font-size:25px}.time small{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}.card{background:rgba(18,26,48,.92);border:1px solid var(--line);border-radius:24px;padding:26px}.card h2{margin-top:0}
+    label{display:block;font-weight:700;margin:15px 0 7px}input{width:100%;padding:14px 15px;border-radius:12px;border:1px solid #34415f;background:#0b1123;color:#fff;font-size:16px;outline:none}input:focus{border-color:var(--accent)}button{width:100%;border:0;border-radius:13px;padding:15px;font-size:16px;font-weight:900;cursor:pointer;background:linear-gradient(90deg,var(--accent),#a36cff);color:white;margin-top:18px}
+    .fine{font-size:12px;color:var(--muted);margin-top:12px}.steps{display:grid;gap:14px}.step{display:flex;gap:13px;align-items:flex-start}.num{min-width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#202c51;color:#bfc9ff;font-weight:900}.share{background:#172143;border:1px solid var(--line);color:#fff}
+    .notice{display:none;background:#0f3b32;border:1px solid #287866;color:#d9fff5;padding:14px;border-radius:12px;margin-top:15px}.rules{color:var(--muted);font-size:14px}.rules a{color:#b9adff}.footer{text-align:center;color:#74809a;font-size:13px;padding:35px 0}
+    @media(max-width:750px){.grid{grid-template-columns:1fr}.hero{padding-top:35px}.amount{font-size:44px}.timer{gap:6px}.time{min-width:65px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav"><div class="brand">🎁 GiftGiveaway</div><div class="badge">FREE ENTRY</div></nav>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">NO PURCHASE NECESSARY</div>
+        <h1>Win a <span>$100 Gift Card</span></h1>
+        <p>Enter our free giveaway for a chance to receive a $100 gift card. One eligible winner will be selected after the giveaway closes.</p>
+        <div class="prize">
+          <div class="gift">🎁</div>
+          <div class="amount">$100</div>
+          <div class="sub">Gift Card Prize</div>
+          <div class="timer" aria-label="Giveaway countdown">
+            <div class="time"><b id="days">00</b><small>Days</small></div>
+            <div class="time"><b id="hours">00</b><small>Hours</small></div>
+            <div class="time"><b id="mins">00</b><small>Minutes</small></div>
+            <div class="time"><b id="secs">00</b><small>Seconds</small></div>
+          </div>
+          <div class="sub" id="deadline">Giveaway closes soon</div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card" id="enter">
+          <h2>Enter the giveaway</h2>
+          <p class="sub">Submit your details below. We only use the information you provide for giveaway administration and related updates where you consent.</p>
+          <form id="entryForm">
+            <label for="name">First name</label>
+            <input id="name" name="name" autocomplete="given-name" required maxlength="60" placeholder="Your first name">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@example.com">
+            <label><input id="consent" type="checkbox" required style="width:auto;margin-right:8px"> I agree to the giveaway rules and privacy notice.</label>
+            <button type="submit">Enter for Free →</button>
+            <div class="notice" id="notice">Entry received! This demo stores no personal information on a server. Connect a compliant backend before collecting real entries.</div>
+            <div class="fine">Never enter passwords, card numbers, banking details, verification codes, or other sensitive information.</div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>How it works</h2>
+          <div class="steps">
+            <div class="step"><div class="num">1</div><div><b>Enter free</b><br><span class="sub">Complete the simple entry form.</span></div></div>
+            <div class="step"><div class="num">2</div><div><b>Share if you want</b><br><span class="sub">Invite friends using the share button below. Sharing is optional.</span></div></div>
+            <div class="step"><div class="num">3</div><div><b>Winner selected</b><br><span class="sub">An eligible winner is selected after the closing date and contacted using the submitted email.</span></div></div>
+          </div>
+          <button class="share" id="shareBtn" type="button">↗ Share Giveaway</button>
+        </div>
+      </section>
+
+      <section class="card rules">
+        <h2>Official rules & privacy</h2>
+        <p><b>Eligibility:</b> Open to eligible participants who meet the requirements stated by the giveaway organizer. Void where prohibited.</p>
+        <p><b>Winner:</b> One winner will be selected at random from eligible entries after the giveaway closes. The organizer will contact the selected entrant using the email provided.</p>
+        <p><b>No purchase:</b> No purchase or payment is required to enter or win. Purchasing does not improve the chance of winning.</p>
+        <p><b>Privacy:</b> Do not collect information you do not need. Before launching publicly, replace this demo form with your real privacy notice, retention policy, organizer identity, eligibility restrictions, and applicable local giveaway rules.</p>
+        <p><b>Important:</b> This page is a template. It does not itself create a real prize, winner selection system, or legal giveaway. Add accurate organizer and prize information before publishing.</p>
+      </section>
+    </main>
+
+    <footer class="footer">© 2026 GiftGiveaway · Free-entry promotional template</footer>
+  </div>
+
+<script>
+  // Set the real closing date before publishing.
+  const closingDate = new Date(Date.now() + 7*24*60*60*1000);
+  const $ = id => document.getElementById(id);
+  function tick(){
+    let d = closingDate - Date.now();
+    if(d < 0) d = 0;
+    $('days').textContent = String(Math.floor(d/86400000)).padStart(2,'0');
+    $('hours').textContent = String(Math.floor(d/3600000)%24).padStart(2,'0');
+    $('mins').textContent = String(Math.floor(d/60000)%60).padStart(2,'0');
+    $('secs').textContent = String(Math.floor(d/1000)%60).padStart(2,'0');
+    $('deadline').textContent = 'Closes: ' + closingDate.toLocaleString();
+  }
+  tick(); setInterval(tick,1000);
+
+  $('entryForm').addEventListener('submit', e => {
+    e.preventDefault();
+    $('notice').style.display='block';
+    e.target.querySelector('button').textContent='Entry Submitted ✓';
+    e.target.querySelector('button').disabled=true;
+  });
+
+  $('shareBtn').addEventListener('click', async () => {
+    const data={title:'Free Gift Card Giveaway',text:'Enter this free gift-card giveaway:',url:location.href};
+    if(navigator.share){try{await navigator.share(data)}catch{}}
+    else{await navigator.clipboard.writeText(location.href); alert('Giveaway link copied!');}
+  });
+</script>
+</body>
+</html>
