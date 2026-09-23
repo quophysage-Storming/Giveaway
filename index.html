@@ -203,17 +203,15 @@
     .card-brand-logo {
       display: flex;
       align-items: center;
-      gap: 14px;
-      font-size: 1.5rem;
+      gap: 12px;
+      font-size: 1.6rem;
       font-weight: 800;
       letter-spacing: -0.5px;
     }
 
-    .card-brand-img {
-      width: 52px;
-      height: 38px;
-      object-fit: contain;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    .card-brand-icon {
+      font-size: 2.5rem;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
     }
 
     .card-chip {
@@ -395,7 +393,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       padding: 16px 12px;
       background: rgba(10, 15, 30, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -418,11 +416,8 @@
       box-shadow: 0 0 20px rgba(124, 77, 255, 0.4), inset 0 0 10px rgba(124, 77, 255, 0.2);
     }
 
-    .gift-logo-img {
-      width: 38px;
-      height: 38px;
-      object-fit: contain;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+    .gift-icon {
+      font-size: 1.8rem;
     }
 
     .gift-name {
@@ -723,7 +718,7 @@
           <div class="virtual-card" id="cardShowcase">
             <div class="card-top">
               <div class="card-brand-logo">
-                <img id="previewImg" class="card-brand-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Gift Card Logo">
+                <span class="card-brand-icon" id="previewIcon">🏷️</span>
                 <span id="previewBrandName">Amazon Gift Card</span>
               </div>
               <div class="card-chip"></div>
@@ -762,65 +757,65 @@
             <label class="field-label">Choose Gift Card Type</label>
             <div class="gift-grid">
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="Amazon" data-img="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" data-gradient="linear-gradient(135deg, #ff9900 0%, #111827 100%)" checked>
+                <input type="radio" name="giftType" value="Amazon" data-icon="📦" data-gradient="linear-gradient(135deg, #ff9900 0%, #111827 100%)" checked>
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="gift-logo-img">
+                  <span class="gift-icon">📦</span>
                   <span class="gift-name">Amazon</span>
                 </div>
               </label>
 
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="Target" data-img="https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg" data-gradient="linear-gradient(135deg, #cc0000 0%, #111827 100%)">
+                <input type="radio" name="giftType" value="Target" data-icon="🎯" data-gradient="linear-gradient(135deg, #cc0000 0%, #111827 100%)">
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg" alt="Target" class="gift-logo-img">
+                  <span class="gift-icon">🎯</span>
                   <span class="gift-name">Target</span>
                 </div>
               </label>
 
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="PSN" data-img="https://upload.wikimedia.org/wikipedia/commons/0/00/PlayStation_logo.svg" data-gradient="linear-gradient(135deg, #00439c 0%, #000428 100%)">
+                <input type="radio" name="giftType" value="PSN" data-icon="🎮" data-gradient="linear-gradient(135deg, #00439c 0%, #000428 100%)">
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/PlayStation_logo.svg" alt="PSN" class="gift-logo-img">
+                  <span class="gift-icon">🎮</span>
                   <span class="gift-name">PSN</span>
                 </div>
               </label>
 
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="Apple" data-img="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" data-gradient="linear-gradient(135deg, #555555 0%, #111827 100%)">
+                <input type="radio" name="giftType" value="Apple" data-icon="🍏" data-gradient="linear-gradient(135deg, #a2aaad 0%, #111827 100%)">
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="Apple" class="gift-logo-img">
+                  <span class="gift-icon">🍏</span>
                   <span class="gift-name">Apple</span>
                 </div>
               </label>
 
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="Steam" data-img="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" data-gradient="linear-gradient(135deg, #171a21 0%, #1b2838 100%)">
+                <input type="radio" name="giftType" value="Steam" data-icon="🕹️" data-gradient="linear-gradient(135deg, #171a21 0%, #1b2838 100%)">
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam" class="gift-logo-img">
+                  <span class="gift-icon">🕹️</span>
                   <span class="gift-name">Steam</span>
                 </div>
               </label>
 
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="Xbox" data-img="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" data-gradient="linear-gradient(135deg, #107c41 0%, #051a0e 100%)">
+                <input type="radio" name="giftType" value="Xbox" data-icon="❎" data-gradient="linear-gradient(135deg, #107c41 0%, #051a0e 100%)">
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" alt="Xbox" class="gift-logo-img">
+                  <span class="gift-icon">❎</span>
                   <span class="gift-name">Xbox</span>
                 </div>
               </label>
 
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="Google Play" data-img="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_Play_2022_icon.svg" data-gradient="linear-gradient(135deg, #01875f 0%, #0b1d16 100%)">
+                <input type="radio" name="giftType" value="Google Play" data-icon="▶️" data-gradient="linear-gradient(135deg, #01875f 0%, #0b1d16 100%)">
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_Play_2022_icon.svg" alt="Google Play" class="gift-logo-img">
+                  <span class="gift-icon">▶️</span>
                   <span class="gift-name">Google Play</span>
                 </div>
               </label>
 
               <label class="gift-radio">
-                <input type="radio" name="giftType" value="Roblox" data-img="https://upload.wikimedia.org/wikipedia/commons/4/4b/Roblox_Logo_2022.svg" data-gradient="linear-gradient(135deg, #e1231a 0%, #111827 100%)">
+                <input type="radio" name="giftType" value="Roblox" data-icon="🧱" data-gradient="linear-gradient(135deg, #e1231a 0%, #111827 100%)">
                 <div class="gift-option-btn">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Roblox_Logo_2022.svg" alt="Roblox" class="gift-logo-img">
+                  <span class="gift-icon">🧱</span>
                   <span class="gift-name">Roblox</span>
                 </div>
               </label>
@@ -955,13 +950,12 @@
 
       if (selectedTypeInput && selectedAmountInput) {
         const brandName = selectedTypeInput.value + ' Gift Card';
-        const imgSrc = selectedTypeInput.getAttribute('data-img') || '';
+        const icon = selectedTypeInput.getAttribute('data-icon') || '🎁';
         const gradient = selectedTypeInput.getAttribute('data-gradient') || 'linear-gradient(135deg, #1e1b4b, #31103f)';
         const amount = selectedAmountInput.value;
 
         $('previewBrandName').textContent = brandName;
-        $('previewImg').src = imgSrc;
-        $('previewImg').alt = brandName;
+        $('previewIcon').textContent = icon;
         $('previewAmount').textContent = amount;
         $('cardShowcase').style.background = gradient;
       }
