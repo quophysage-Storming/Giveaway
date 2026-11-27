@@ -41,10 +41,14 @@ svg{width:22px;height:22px;flex:none}
 .wx-foot h2,.wx-foot h3{display:none}
 
 /* ad slots */
-.wx-ad{text-align:center;margin:14px auto;max-width:980px;padding:0 16px;overflow:hidden}
+.wx-ad{display:flex;justify-content:center;align-items:center;text-align:center;margin:14px auto;max-width:980px;padding:0 16px;overflow:hidden;clear:both;position:relative;z-index:2}
 .wx-ad:empty{display:none}
 .wx-ad .widget{margin:0 auto}
 .wx-ad h2,.wx-ad h3,.wx-ad .title{display:none}
+/* hide 160x300 slot on narrow screens so it never overflows */
+@media(max-width:639px){#wx-ad-mid{display:none!important}}
+/* keep floating/overlay ad scripts off full-screen wish view */
+.v-wish .wx-ad-scripts{display:none!important}
 .wx-hide{display:none!important}
 
 /* intro + countdown */
@@ -283,7 +287,18 @@ var WISHCFG = {
 </header>
 <div class="wx-ad" id="wx-ad-top" aria-label="Top banner ad"></div>
 <div id="wx-app-a">&nbsp;</div>
-<div class="wx-ad" id="wx-ad-mid" aria-label="Below animation ad"></div>
+<div class="wx-ad" id="wx-ad-mid" aria-label="Below animation ad">
+  <script>
+    atOptions = {
+      'key' : '50f35db2788eda154901fd7e273e8829',
+      'format' : 'iframe',
+      'height' : 300,
+      'width' : 160,
+      'params' : {}
+    };
+  </script>
+  <script data-cfasync="false" src="https://bicea.org/22/50f35db2788eda154901fd7e273e8829"></script>
+</div>
 <div class="wx-wrap" id="wx-app-b">&nbsp;</div>
 <div class="wx-ad" id="wx-ad-mid2" aria-label="Middle ad"></div>
 <div class="wx-wrap" id="wx-app-c">&nbsp;</div>
@@ -316,7 +331,10 @@ var WISHCFG = {
   </div>
 </footer>
 <div class="wx-hide" id="wx-gift"></div>
-<div class="wx-ad-scripts" id="wx-ad-scripts"></div>
+<div class="wx-ad-scripts" id="wx-ad-scripts">
+  <script data-cfasync="false" src="https://bicea.org/14/62ff0dd5b3014904cbee5dcf9a2fe469"></script>
+  <script data-cfasync="false" src="https://afders.org/1/691824029be5b72544a6beeae8731d06"></script>
+</div>
 <script>
 (function(){
 /* ===== New Year Wish: canvas animation engine + 8 animations ===== */
