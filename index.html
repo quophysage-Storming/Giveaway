@@ -1,29 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="en" dir="ltr">
 <head>
-<meta charset='utf-8'/>
-<meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'/>
-<meta content='#07051a' name='theme-color'/>
-<meta content='newyear-wish-1' name='wx-theme'/>
-<title><b:if cond='data:view.isHomepage'><data:blog.title.escaped/> | New Year 2027 Wishes With Name<b:else/><data:view.title.escaped/> | <data:blog.title.escaped/></b:if></title>
-<b:include data='blog' name='all-head-content'/>
-<b:if cond='data:view.isSingleItem'>
-<meta expr:content='data:view.title.escaped' property='og:title'/>
-<b:else/>
-<meta content='🎁 You got a New Year 2027 surprise! Tap to open' property='og:title'/>
-<meta content='Someone sent you a magical Happy New Year 2027 wish with fireworks and music. Tap to open it now.' property='og:description'/>
-<meta content='Someone sent you a magical Happy New Year 2027 wish with fireworks and music. Tap to open it now.' name='description'/>
-</b:if>
-<meta content='website' property='og:type'/>
-<meta expr:content='data:blog.title.escaped' property='og:site_name'/>
-<!-- WhatsApp preview image: upload og-image.jpg in any post, copy the image link and paste it in the next line -->
-<meta content='PASTE_YOUR_OG_IMAGE_LINK_HERE' property='og:image'/>
-<meta content='summary_large_image' name='twitter:card'/>
-<link href='https://fonts.googleapis.com' rel='preconnect'/>
-<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
-<link href='https://fonts.googleapis.com/css2?family=Cinzel:wght@900&amp;family=Great+Vibes&amp;family=Poppins:wght@500;600;700;800;900&amp;family=Noto+Nastaliq+Urdu:wght@600;700&amp;family=Noto+Naskh+Arabic:wght@600;700&amp;family=Noto+Sans+Bengali:wght@600;700;800&amp;display=swap' rel='stylesheet'/>
-<b:skin><![CDATA[
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#07051a" name="theme-color"/>
+<meta content="newyear-wish-1" name="wx-theme"/>
+<title>New Year Wishes | New Year 2027 Wishes With Name</title>
+<meta content="🎁 You got a New Year 2027 surprise! Tap to open" property="og:title"/>
+<meta content="Someone sent you a magical Happy New Year 2027 wish with fireworks and music. Tap to open it now." property="og:description"/>
+<meta content="Someone sent you a magical Happy New Year 2027 wish with fireworks and music. Tap to open it now." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="New Year Wishes" property="og:site_name"/>
+<!-- WhatsApp preview image: replace PASTE_YOUR_OG_IMAGE_LINK_HERE with your image URL -->
+<meta content="PASTE_YOUR_OG_IMAGE_LINK_HERE" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&amp;family=Great+Vibes&amp;family=Poppins:wght@500;600;700;800;900&amp;family=Noto+Nastaliq+Urdu:wght@600;700&amp;family=Noto+Naskh+Arabic:wght@600;700&amp;family=Noto+Sans+Bengali:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
 /* ===== New Year Wish theme ===== */
 :root{--bg:#07051a;--bg2:#120b33;--card:#130d36;--line:rgba(255,215,120,.22);--gold:#ffd76a;--gold2:#e0a526;--txt:#f4efff;--mut:#b9b0dd;--wa:#25d366;--fb:#1877f2;--r:22px}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -43,7 +37,7 @@ svg{width:22px;height:22px;flex:none}
 .wx-top-tag{font:700 12px/1 Poppins,sans-serif;color:#1b1030;background:var(--gold);padding:7px 11px;border-radius:99px;white-space:nowrap}
 .wx-foot{margin-top:34px;padding:26px 0 110px;border-top:1px solid rgba(255,255,255,.07);color:var(--mut);font-size:13px;text-align:center}
 .wx-foot a{color:var(--mut)}
-.wx-foot .widget ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;margin-bottom:10px}
+.wx-foot .widget ul,.wx-flinks ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;margin-bottom:10px}
 .wx-foot h2,.wx-foot h3{display:none}
 
 /* ad slots */
@@ -267,39 +261,42 @@ svg{width:22px;height:22px;flex:none}
 .wx-first .wx-form{border:0;box-shadow:none;margin-top:0}
 .wx-box+.wx-box{border-top:1px solid rgba(255,255,255,.08)}
 }
-
-]]></b:skin>
-<script>var WISHCFG={platform:'blogger',year:2027,home:'<data:blog.homepageUrl/>',single:<b:if cond='data:view.isSingleItem'>true<b:else/>false</b:if>,isPage:<b:if cond='data:view.isPage'>true<b:else/>false</b:if>,postId:'<b:if cond='data:view.isSingleItem'><data:view.postId/></b:if>',gift:''};</script>
+</style>
+<script>
+var WISHCFG = {
+  platform: 'html',
+  year: 2027,
+  home: window.location.href.split('#')[0].split('?')[0],
+  single: false,
+  isPage: false,
+  postId: '',
+  gift: ''
+};
+</script>
 </head>
 <body>
-<header class='wx-top'>
-  <div class='wx-wrap'>
-    <a class='wx-logo' expr:href='data:blog.homepageUrl'><i>🎆</i><span><data:blog.title/></span></a>
-    <span class='wx-top-tag'>✨ Free New Year wishes</span>
+<header class="wx-top">
+  <div class="wx-wrap">
+    <a class="wx-logo" href="./"><i>🎆</i><span>New Year <b>Wishes</b></span></a>
+    <span class="wx-top-tag">✨ Free New Year wishes</span>
   </div>
 </header>
-<b:section class='wx-ad' id='wx-ad-top' name='Ad: top banner (every page)'/>
-<div id='wx-app-a'>&#160;</div>
-<b:section class='wx-ad' id='wx-ad-mid' name='Ad: below the animation'/>
-<div class='wx-wrap' id='wx-app-b'>&#160;</div>
-<b:section class='wx-ad' id='wx-ad-mid2' name='Ad: middle of the page'/>
-<div class='wx-wrap' id='wx-app-c'>&#160;</div>
-<article class='wx-post' id='wx-post'>
-  <b:section class='wx-main' id='page_body' name='Posts and pages' showaddelement='false'>
-    <b:widget id='Blog1' locked='true' title='Posts' type='Blog' version='2' visible='true'>
-      <b:includable id='main' var='top'>
-        <b:if cond='data:view.isSingleItem'>
-          <b:loop values='data:posts' var='post'>
-            <div class='wx-post-in'><h1><data:post.title/></h1><div class='wx-post-body'><data:post.body/></div></div>
-          </b:loop>
-        </b:if>
-      </b:includable>
-    </b:widget>
-  </b:section>
+<div class="wx-ad" id="wx-ad-top" aria-label="Top banner ad"></div>
+<div id="wx-app-a">&nbsp;</div>
+<div class="wx-ad" id="wx-ad-mid" aria-label="Below animation ad"></div>
+<div class="wx-wrap" id="wx-app-b">&nbsp;</div>
+<div class="wx-ad" id="wx-ad-mid2" aria-label="Middle ad"></div>
+<div class="wx-wrap" id="wx-app-c">&nbsp;</div>
+<article class="wx-post" id="wx-post">
+  <div class="wx-main" id="page_body">
+    <div class="wx-post-in">
+      <h1>New Year 2027 Wishes</h1>
+      <div class="wx-post-body"></div>
+    </div>
+  </div>
 </article>
-<b:section class='wx-ad' id='wx-ad-bottom' name='Ad: bottom banner (every page)'/>
-<b:if cond='!data:view.isSingleItem'>
-<section class='wx-seo'>
+<div class="wx-ad" id="wx-ad-bottom" aria-label="Bottom banner ad"></div>
+<section class="wx-seo">
 <h2>Free New Year 2027 Wishes With Your Name</h2>
 <p>Make a magical Happy New Year 2027 wish with your own name in a few seconds. Write your name, pick one of our premium animations like Royal Fireworks, Galaxy Stars, Midnight Countdown, Sky Lanterns, Golden Luxe, Neon City, Magic Gift and Aurora Snow, then send the link to your friends and family on WhatsApp, Facebook, Telegram and X.</p>
 <p>Your friends open the link and see your name in big 3D gold letters with fireworks, music and a sweet New Year message. They can make their own wish right after, so the joy keeps going.</p>
@@ -312,17 +309,15 @@ svg{width:22px;height:22px;flex:none}
 <h3>Can I put it on my WhatsApp Status?</h3>
 <p>Yes. Copy your link and post it on your WhatsApp Status or in family groups. Everyone who taps it sees your wish.</p>
 </section>
-
-</b:if>
-<footer class='wx-foot'>
-  <div class='wx-wrap'>
-    <b:section class='wx-flinks' id='wx-foot-links' name='Footer links (add a Pages gadget)'/>
-    <p>&#169; <data:blog.title/> &#183; Free New Year 2027 wishes with your name</p>
+<footer class="wx-foot">
+  <div class="wx-wrap">
+    <div class="wx-flinks" id="wx-foot-links"></div>
+    <p>&#169; New Year Wishes &#183; Free New Year 2027 wishes with your name</p>
   </div>
 </footer>
-<b:section class='wx-hide' id='wx-gift' name='Gift button: paste your Smartlink in an HTML gadget'/>
-<b:section class='wx-ad-scripts' id='wx-ad-scripts' name='Ad scripts: Social Bar, Popunder, Monetag tag'/>
-<script>//<![CDATA[
+<div class="wx-hide" id="wx-gift"></div>
+<div class="wx-ad-scripts" id="wx-ad-scripts"></div>
+<script>
 (function(){
 /* ===== New Year Wish: canvas animation engine + 8 animations ===== */
 var TAU = Math.PI * 2;
@@ -1208,6 +1203,6 @@ function boot() {
 })();
 
 })();
-//]]></script>
+</script>
 </body>
 </html>
