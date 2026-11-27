@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /*?n=
+
+Sitemap: https://xmas-wishes.pages.dev/sitemap.xml
